@@ -33,7 +33,7 @@ public class HibernateCourseDAO implements CourseD {
     @Override
     @Transactional(readOnly = true)
     public List<CourseI> findAll() {
-        return getSessionFactory().getCurrentSession().createQuery( ).list();
+        return getSessionFactory().getCurrentSession().createQuery("from ru.specialist.hibernateDAO.CourseI c").list();
     }
 
     @Override
